@@ -1,5 +1,19 @@
 # fridgeweb
 
+2023/9/10  新增編輯及刪除冰箱
+
+routes\web.php
+
+resources\views\show\show-fridge.blade.php
+
+resources\views\fridgeedit\edit.blade.php
+
+app\Http\Requests\FridgeeditUpdateRequest.php
+
+app\Http\Controllers\FridgeEditController.php
+
+------------------------------------------------------
+
 app\Http\Controllers\Auth\RegisteredUserController.php
 
 app\Http\Controllers\AddFridgeController.php
