@@ -12,7 +12,9 @@ app\Http\Requests\FridgeeditUpdateRequest.php
 
 app\Http\Controllers\FridgeEditController.php
 
+
 ------------------------------------------------------
+
 
 app\Http\Controllers\Auth\RegisteredUserController.php
 
@@ -46,6 +48,3 @@ routes\web.php
 
 登入後可新增冰箱及看到自己新增的冰箱
 
-profile多了company跟telephone，還沒設輸入規定，暫時是限制長度255的字串
-
-而且目前這兩個資料不能從profile修改，還在找原因QQ
