@@ -1,10 +1,11 @@
 <?php
 
-use App\Http\Controllers\FridgeEditController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\FridgeController;
 use App\Http\Controllers\AddFridgeController;
 use App\Http\Controllers\ShowController;
+use App\Http\Controllers\FridgeEditController;
+use App\Http\Controllers\FridgeContentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,12 +37,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/show/edit/{fridgeId}', [FridgeEditController::class, 'edit'])->name('fridgeedit.edit');
     Route::patch('/show/edit/{fridgeId}', [FridgeEditController::class, 'update'])->name('fridgeedit.update');
     Route::delete('/show/edit/{fridgeId}', [FridgeEditController::class, 'delete'])->name('fridgeedit.delete');
-
-
+    Route::get('/show/content/{fridgeId}', [FridgeContentController::class, 'edit'])->name('content.edit');
+    Route::patch('/show/content/{fridgeId}/{productId}', [FridgeContentController::class, 'update'])->name('content.update');
 });
 
-
-
 Route::post('/selecttable', [FridgeController::class, 'selectTable'])->name('selecttable');
+Route::get('/fridgedetail', [FridgeController::class, 'detail'])->name('fridgedetail');
 
 require __DIR__.'/auth.php';
