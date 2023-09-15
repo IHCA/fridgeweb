@@ -1,5 +1,19 @@
 # fridgeweb
 
+2023/9/15  新增刪除冰箱內食物
+
+routes\web.php
+
+resources\views\show\show-fridge.blade.php
+
+resources\views\content\edit.php
+
+app\Http\Controllers\FridgeContentController.php
+
+
+
+------------------------------------------------------
+
 2023/9/10  新增編輯及刪除冰箱
 
 routes\web.php
