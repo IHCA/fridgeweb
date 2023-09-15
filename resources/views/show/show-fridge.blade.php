@@ -20,15 +20,18 @@
                             <p style="margin-bottom: 10px;"><strong>Email:</strong> {{ $fridge->email }}</p>
 
                             <!-- Edit and Delete buttons with increased spacing -->
-                            <div class="flex items-center gap-4">
+                            <div class="flex items-center">
+                                <!-- Show Content button -->
+                                <a href="/show/content/{{ $fridge->id }}" class="btn btn-primary" style="background-color: black; color: white; border-radius: 10px; padding: 6px 12px; font-size: 16px; margin-right: 20px;">內容</a>
+                                
                                 <!-- Edit button -->
-                                <a href="/show/edit/{{ $fridge->id }}" class="btn btn-primary" style="background-color: black; color: white; border-radius: 10px; padding: 6px 12px; font-size: 16px;">編輯</a>
+                                <a href="/show/edit/{{ $fridge->id }}" class="btn btn-primary" style="background-color: black; color: white; border-radius: 10px; padding: 6px 12px; font-size: 16px; margin-right: 20px;">編輯</a>
 
-                                <!-- Delete button with margin -->
+                                <!-- Delete button -->
                                 <form method="POST" action="{{ route('fridgeedit.delete', ['fridgeId' => $fridge->id]) }}">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-danger" style="background-color: red; color: white; border-radius: 10px; padding: 6px 12px; font-size: 16px; margin-left: 10px;" onclick="return confirm('確定要刪除這個冰箱嗎？')">刪除</button>
+                                    <button type="submit" class="btn btn-danger" style="background-color: red; color: white; border-radius: 10px; padding: 6px 12px; font-size: 16px; margin-right: 20px;" onclick="return confirm('確定要刪除這個冰箱嗎？')">刪除</button>
                                 </form>
                             </div>
                         </div>
