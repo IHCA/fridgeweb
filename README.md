@@ -6,7 +6,7 @@ routes\web.php
 
 resources\views\show\show-fridge.blade.php
 
-resources\views\content\edit.php
+resources\views\content\edit.blade.php
 
 app\Http\Controllers\FridgeContentController.php
 
